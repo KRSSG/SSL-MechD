@@ -68,3 +68,28 @@ Dimensions:
 * Material: iron
 The chip kicker didn’t gave satisfactory result and is still under development.
 
+##SSL v2.1
+
+##Straight Kicker
+Straight kicker consists of solenoid and plunger. Plunger is the one that hits the ball. 
+
+###Solenoid
+The frame of solenoid is made of 6061-Aluminium alloy and is cylindrical in shape with an inner diameter of 11.4mm and an outer diameter of12.5mm. Its length is 44mm and thickness is 0.55mm. The wires wound around it are 24 AWG wires and the number of turns is approximately 400. We assume that a constant current of 40 A flows in it throughout its application time.
+###Plunger
+Straight kicker consists of a custom made plunger with magnetic material (pure iron) in the middle and aluminium upon the remaining length. The length of the iron part is 45mm.The diameter of plunger is 11mm.
+ 
+The Dynamic Analysis of a solenoid which when fed by constant current was done using MATLAB 2013a, FEMM 4.2 and ADAMS software’s.
+
+####Approach
+The initial position of plunger in the solenoid across the two cross sections was created using FEMM 4.2. Then, the plunger was made to move a little distance (about 1 mm) into the solenoid in each iteration on MATLAB. In each iteration the force was calculated in the plunger and stored in an array f while its distance from its initial position was stored in x. The iterations were carried on till the plunger reached its final position (here after 40 iterations). The force was calculated in each iteration. Finally the plot of force vs distance was generated. The area of the enclosed in the graph is supposed to give the energy supplied by the solenoid to the plunger.
+
+##Chip Kicker
+
+The Dynamic Analysis of a solenoid which when fed by constant current was done using MATLAB 2013a and FEMM 4.2 softwares.
+
+2 plunger designs were used. One with a thickness of 3.52 mm and length of 64mm (Plunger 1) and the other with a thickness of 2.67 mm and length of 70.75 mm (Plunger 2). Both plungers are 33.8 mm wide.
+
+###Approach
+Using FEMM 4.2 software,image initial position of plunger image was created in the solenoid across the two cross sections. Then using a code in MATLAB the plunger was made to move a distance of 1 mm into the solenoid in each iteration. In each iteration the force was calculated in the plunger and stored in an array f while its distance from its initial position was stored in x. The iterations were carried on till the plunger reached it’s final position (here after 33 iterations). The force was calculated on both the cross sections and added. Finally the plot of force vs distance was generated. The area of the enclosed in the graph gave us the energy supplied by the solenoid to the plunger.
+
+
